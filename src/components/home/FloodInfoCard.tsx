@@ -47,7 +47,7 @@ const FloodInfoCard = ({ totalStation }: { totalStation: number }) => {
           </div>
 
           {/* New Data Entry */}
-          <div className="flex items-center gap-3">
+          <div className="md:flex items-center gap-3 hidden">
             <Button size="icon" className="bg-yellow-100 hover:bg-yellow-200">
               <ArrowUp className="text-yellow-600 w-8 h-8" />
             </Button>
