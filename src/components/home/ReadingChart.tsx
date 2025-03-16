@@ -1,11 +1,17 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
-const ReadingChart = ({
-  data,
-}: {
-  data: { time: string; value: number }[];
-}) => {
-  const options: any = {
+
+type ChartData = {
+  time: string;
+  value: number;
+};
+
+type ReadingChartProps = {
+  data: ChartData[];
+};
+
+const ReadingChart: React.FC<ReadingChartProps> = ({ data }) => {
+  const options: echarts.EChartsOption = {
     tooltip: { trigger: "axis" },
     xAxis: { type: "category", data: data.map((d) => d.time) },
     yAxis: { type: "value" },
@@ -19,6 +25,7 @@ const ReadingChart = ({
       },
     ],
   };
+
   return <ReactECharts option={options} style={{ height: 400 }} />;
 };
 

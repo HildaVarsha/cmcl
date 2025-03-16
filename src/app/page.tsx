@@ -17,7 +17,6 @@ import {
 } from "@/components/home";
 import { useDebounce } from "@/components/hooks";
 import { Card } from "@/components/ui";
-import { TopNavbar } from "@/components/shared";
 
 interface Station {
   stationReference: string;
@@ -51,17 +50,19 @@ const FloodMonitoring: React.FC = () => {
       const data = await response.json();
 
       const stationsList = Array.isArray(data.items)
-        ? data.items.map((item: any) => ({
-            label: item.label || "Unknown Station",
-            stationReference: item.stationReference || "",
-          }))
+        ? data.items.map(
+            (item: { label: string; stationReference: string }) => ({
+              label: item.label || "Unknown Station",
+              stationReference: item.stationReference || "",
+            })
+          )
         : [];
 
       setStations(stationsList);
       setSelectedStation(stationsList?.[0]);
     } catch (error) {
       console.error("Error fetching stations:", error);
-      setStations([]); // Ensure it's always an array on error
+      setStations([]);
     }
   };
 
@@ -161,7 +162,7 @@ const FloodMonitoring: React.FC = () => {
 
       <div className="w-full pt-6 flex flex-col md:flex-row gap-8">
         <Card className="p-6 w-full gap-2">
-          <p className="text-xl font-semibold pb-2 border-b pb-3 border-slate-300">
+          <p className="text-xl font-semibold border-b pb-3 border-slate-300">
             Check Readings
           </p>
 

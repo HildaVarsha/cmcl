@@ -27,7 +27,7 @@ const WelcomeCard = () => {
                   Announcement
                 </Button>
                 <p className="text-2xl font-semibold text-white py-2">
-                  Welcome to the Flood Monitoring Dashboard !!!
+                  Flood Monitoring Dashboard !!!
                 </p>
                 <p className="text-lg font-medium text-white">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.

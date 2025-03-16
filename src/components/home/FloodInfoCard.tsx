@@ -28,7 +28,6 @@ const FloodInfoCard = ({ totalStation }: { totalStation: number }) => {
       </div>
 
       {/* Data Stats */}
-
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-6">
           {/* Up Arrow Data */}
@@ -45,6 +44,14 @@ const FloodInfoCard = ({ totalStation }: { totalStation: number }) => {
               <ArrowDown className="text-red-600 w-8 h-8" />
             </Button>
             <p className="font-medium text-xl text-gray-700">5,344.89</p>
+          </div>
+
+          {/* New Data Entry */}
+          <div className="flex items-center gap-3">
+            <Button size="icon" className="bg-yellow-100 hover:bg-yellow-200">
+              <ArrowUp className="text-yellow-600 w-8 h-8" />
+            </Button>
+            <p className="font-medium text-xl text-gray-700">5,900.00</p>
           </div>
         </div>
 

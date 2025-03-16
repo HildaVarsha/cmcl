@@ -17,7 +17,7 @@ const Notification = () => {
             >
               <Info className="text-green-400 w-4 h-4 mt-1" />
               <div>
-                <p className="">A new sation details updated</p>
+                <p className="">A new station details updated</p>
                 <div className="pt-1 flex items-center justify-between">
                   <p>16 March 2025</p>
                   <p className="text-red-500">11.00 Am</p>
