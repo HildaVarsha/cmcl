@@ -179,7 +179,7 @@ const FloodMonitoring: React.FC = () => {
         </Card>
 
         <Card className="p-6 w-full gap-3">
-          <p className="text-xl font-semibold pb-2 border-b pb-3 border-slate-300">
+          <p className="text-xl font-semibold border-b pb-3 border-slate-300">
             Reading Graph
           </p>
           {loading ? (
